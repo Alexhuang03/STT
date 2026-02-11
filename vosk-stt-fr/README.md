@@ -4,11 +4,23 @@ Ce projet implémente un système de reconnaissance vocale (Speech-to-Text) en t
 
 ## Prérequis
 
-Assurez-vous d'avoir les paquets suivants installés sur votre système :
-- `gcc`
-- `make`
-- `portaudio19-dev` (ou `libportaudio-dev`)
-- `wget`, `unzip`
+Assurez-vous d'avoir les outils suivants :
+- `gcc`, `make`
+- `curl` (command line tool)
+- `portaudio19-dev`
+- **Optionnel** : [Ollama](https://ollama.com/) pour le fallback LLM (modèle `llama3` recommandé).
+
+## Fonctionnalités
+
+- **Reconnaissance Vocale** : VOSK (offline, français).
+- **Commandes Vocales** : Détéction de mots-clés (Droites, Gauche, Stop, etc.).
+- **Assistant IA** : Envoie les requêtes non-reconnues à Ollama.
+
+## Compilation
+
+```bash
+make
+```
 
 ## Installation
 
